@@ -1,0 +1,61 @@
+{
+  "test_round": {
+    "account_size_usd": 750,
+    "risk_pct": 0.02,
+    "risk_per_trade_usd": 15.0,
+    "test_round_start": "2026-11-19",
+    "round_end_date": "2026-12-31",
+    "round_end_closed_trades": 10,
+    "max_open_positions": 3,
+    "max_total_open_risk_pct": 0.06,
+    "circuit_breaker_usd": 150,
+    "circuit_breaker_pct": 0.2
+  },
+  "market_regime": {
+    "qqq_last_close": null,
+    "qqq_ma50": null,
+    "market_filter": null,
+    "last_daily_check": null
+  },
+  "paper_positions": {
+    "open": 0,
+    "half_sold": 0,
+    "exited": 0,
+    "voided": 0
+  },
+  "trade_log": {
+    "orders": 0,
+    "entry_fills": 0,
+    "exit_fills": 0,
+    "total_commissions": 0.0,
+    "total_other_costs": 0.0,
+    "net_cash_flow": 0.0
+  },
+  "earnings_radar": [],
+  "test_round_criteria": "Round ends at the first 10 closed real trades or on 2026-12-31, whichever comes first. Judged on win rate, average R, slippage versus the signal price, and commissions as a share of gross result, with the real record set beside the paper record over the same window. Benchmark: QQQ's change from the close the session before the round starts to the round-end close, compared with the account's change over that same window. Beating that QQQ change is the pre-agreed score for the round, not a view on holding QQQ. Circuit breaker: if the cumulative real result (trade-log realized result plus unrealized result) reaches -20% of the account before the round ends, new real-plan sizing pauses and new triggers stay on paper until the round is resumed; positions already open are still tracked.",
+  "paper_performance": {
+    "all": {
+      "exited": 0,
+      "wins": 0,
+      "losses": 0,
+      "win_rate_pct": null,
+      "average_result_pct": null,
+      "median_result_pct": null,
+      "average_win_pct": null,
+      "average_loss_pct": null,
+      "best_pct": null,
+      "worst_pct": null,
+      "sum_pct": null
+    },
+    "by_setup": {},
+    "by_rules_date": {}
+  },
+  "sim_portfolio": {
+    "positions_open": 0,
+    "positions_closed": 0,
+    "realized_usd": 0.0,
+    "unrealized_usd": 0.0,
+    "total_usd": 0.0,
+    "return_pct": 0.0
+  }
+}
